@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Space, the Keeper of Room</title>
+
+<style>
+
+    * {
+
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        margin: 0;
+
+        min-height: 100vh;
+
+        background: #f4f0e8;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+    }
+
+    .page {
+
+        min-height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+
+        padding: 32px 20px;
+
+    }
+
+    .container {
+
+        width: 100%;
+
+        max-width: 520px;
+
+    }
+
+    .header {
+
+        text-align: center;
+
+        padding: 28px 10px 30px;
+
+    }
+
+    .element {
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 12px;
+
+        opacity: 0.65;
+
+    }
+
+    h1 {
+
+        font-size: 34px;
+
+        font-weight: normal;
+
+        margin: 0 0 10px;
+
+    }
+
+    .subtitle {
+
+        font-size: 17px;
+
+        font-style: italic;
+
+        opacity: 0.75;
+
+    }
+
+    .menu {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+    .menu-button {
+
+        width: 100%;
+
+        padding: 18px 20px;
+
+        background: rgba(255,255,255,0.55);
+
+        border: 1px solid rgba(41,37,31,0.18);
+
+        border-radius: 8px;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 16px;
+
+        text-align: left;
+
+        cursor: pointer;
+
+        transition: background 0.2s;
+
+    }
+
+    .menu-button:active {
+
+        background: rgba(255,255,255,0.9);
+
+    }
+
+    .menu-button span {
+
+        display: block;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 5px;
+
+        opacity: 0.6;
+
+    }
+
+    .section {
+
+        display: none;
+
+    }
+
+    .section.active {
+
+        display: block;
+
+    }
+
+    .section-header {
+
+        text-align: center;
+
+        padding: 24px 10px 30px;
+
+    }
+
+    .section-label {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+
+        opacity: 0.6;
+
+        margin-bottom: 12px;
+
+    }
+
+    h2 {
+
+        font-size: 29px;
+
+        font-weight: normal;
+
+        margin: 0;
+
+    }
+
+    .content {
+
+        background: rgba(255,255,255,0.45);
+
+        border-radius: 10px;
+
+        padding: 24px 22px;
+
+        line-height: 1.65;
+
+        font-size: 17px;
+
+    }
+
+    .content p {
+
+        margin: 0 0 18px;
+
+    }
+
+    .content p:last-child {
+
+        margin-bottom: 0;
+
+    }
+
+    .instruction {
+
+        padding: 18px;
+
+        margin: 20px 0;
+
+        border-left: 3px solid rgba(41,37,31,0.45);
+
+        background: rgba(255,255,255,0.35);
+
+    }
+
+    .instruction strong {
+
+        display: block;
+
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 8px;
+
+    }
+
+    .rule {
+
+        font-style: italic;
+
+        text-align: center;
+
+        padding: 22px 8px;
+
+        margin-top: 24px;
+
+        border-top: 1px solid rgba(41,37,31,0.15);
+
+    }
+
+    .back-button {
+
+        display: block;
+
+        width: 100%;
+
+        margin-top: 22px;
+
+        padding: 15px;
+
+        background: transparent;
+
+        border: 1px solid rgba(41,37,31,0.3);
+
+        border-radius: 8px;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 15px;
+
+        cursor: pointer;
+
+    }
+
+    .back-button:active {
+
+        background: rgba(255,255,255,0.5);
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="container">
+
+    <!-- MAIN MENU -->
+
+    <div id="menu">
+
+        <div class="header">
+
+            <div class="element">Your Element</div>
+
+            <h1>Space</h1>
+
+            <div class="subtitle">the Keeper of Room</div>
+
+        </div>
+
+        <div class="menu">
+
+            <button class="menu-button" onclick="showSection('intro')">
+
+                <span>Begin here</span>
+
+                Introduction
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m1')">
+
+                <span>Movement I</span>
+
+                Abundance
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m2')">
+
+                <span>Movement II</span>
+
+                Imagination
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m3')">
+
+                <span>Movement III</span>
+
+                Connection
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m4')">
+
+                <span>Movement IV</span>
+
+                Fracture
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m5')">
+
+                <span>Movement V</span>
+
+                Return
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- INTRODUCTION -->
+
+    <div id="intro" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Your Element</div>
+
+            <h2>Space</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>You are Space, the one who makes room for everything to exist.</p>
+
+            <p>The distance between stars. The pause between breaths. The room around a body. The silence between words.</p>
+
+            <p>Your role is simple: <strong>notice when something needs space.</strong></p>
+
+            <div class="instruction">
+
+                <strong>A small rule</strong>
+
+                Do not fill every opening. Sometimes the most important thing you can create is room for something to remain exactly as it is.
+
+            </div>
+
+            <p>You will be entrusted with a small bucket and a bell for the evening.</p>
+
+            <p>Whenever you ring the bell, it is an invitation for the room to become attentive.</p>
+
+            <div class="instruction">
+
+                <strong>Your other task</strong>
+
+                Watch the room.
+
+                <br><br>
+
+                Notice when Nature needs physical room, when a conversation needs room to unfold, when someone needs room to be heard, or when silence simply needs to exist.
+
+            </div>
+
+            <p>If space is needed, create it gently. Move something. Pause something. Leave something unsaid. Let someone finish. Or simply do nothing.</p>
+
+            <div class="instruction">
+
+                <strong>Trust the sequence</strong>
+
+                You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
+
+            </div>
+
+            <p>Your role is intentionally small. You do not need to manage the evening, explain your element, or anticipate what anyone else needs from you.</p>
+
+            <div class="rule">
+
+                When your instruction is complete, return to the experience and be a guest.
+
+            </div>
+
+            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT I -->
+
+    <div id="m1" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement I</div>
+
+            <h2>Abundance</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Before Nature begins the story, ring the bell.</p>
+
+            <p>Then become attentive to the room.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                Is there anything that needs more space to exist?
+
+            </div>
+
+            <p>It may be physical space, conversational space, or simply a little more time.</p>
+
+            <p>If you notice something that needs room, create it gently.</p>
+
+            <div class="rule">
+
+                Abundance does not require everything to occupy the same space.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT II -->
+
+    <div id="m2" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement II</div>
+
+            <h2>Imagination</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Before Nature begins the story, ring the bell.</p>
+
+            <p>As the experience unfolds, pay attention to what is beginning to emerge.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                Is there something here that needs room to become what it might be?
+
+            </div>
+
+            <p>Protect that space if you can.</p>
+
+            <p>Do not rush to interpret, explain, or fill it.</p>
+
+            <div class="rule">
+
+                Possibility needs somewhere to live.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT III -->
+
+    <div id="m3" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement III</div>
+
+            <h2>Connection</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Before Nature begins the story, ring the bell.</p>
+
+            <p>Listen closely as the room begins to move through connection.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                Does anyone or anything need more room to be present?
+
+            </div>
+
+            <p>If a conversation wants to continue, let it continue.</p>
+
+            <p>If someone needs to be heard, make room for them.</p>
+
+            <p>If nothing needs to be added, allow the silence to remain.</p>
+
+            <div class="rule">
+
+                Connection is not always closeness. Sometimes it is the room we give each other.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT IV -->
+
+    <div id="m4" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement IV</div>
+
+            <h2>Fracture</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Before Nature begins the story, ring the bell.</p>
+
+            <p>This movement may carry more weight than the others.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                Where does the room need space to hold what has just been said?
+
+            </div>
+
+            <p>Do not hurry to soften the moment.</p>
+
+            <p>Do not rush to make anyone comfortable.</p>
+
+            <p>If silence arrives, protect it.</p>
+
+            <p>If someone needs to speak, make room for them.</p>
+
+            <div class="rule">
+
+                Not every silence needs to be broken.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT V -->
+
+    <div id="m5" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement V</div>
+
+            <h2>Return</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Before Nature begins the story, ring the bell.</p>
+
+            <p>Then notice the room as it is now.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                What needs space now?
+
+            </div>
+
+            <p>Perhaps there is something left to say.</p>
+
+            <p>Perhaps there is something that should remain unsaid.</p>
+
+            <p>Perhaps the room simply needs to become quiet enough to notice what has changed.</p>
+
+            <div class="rule">
+
+                Make room for whatever is here.
+
+            </div>
+
+            <p>Then return to the experience.</p>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function showSection(sectionId) {
+
+    document.getElementById("menu").style.display = "none";
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+
+    window.scrollTo(0, 0);
+
+}
+
+function showMenu() {
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById("menu").style.display = "block";
+
+    window.scrollTo(0, 0);
+
+}
+
+</script>
+
+</body>
+
+</html>
