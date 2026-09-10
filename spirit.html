@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spirit, the Keeper of Memory</title>
+
+<style>
+
+    * {
+
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        margin: 0;
+
+        min-height: 100vh;
+
+        background: #f4f0e8;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+    }
+
+    .page {
+
+        min-height: 100vh;
+
+        display: flex;
+
+        justify-content: center;
+
+        padding: 32px 20px;
+
+    }
+
+    .container {
+
+        width: 100%;
+
+        max-width: 520px;
+
+    }
+
+    .header {
+
+        text-align: center;
+
+        padding: 28px 10px 30px;
+
+    }
+
+    .element {
+
+        font-size: 13px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 12px;
+
+        opacity: 0.65;
+
+    }
+
+    h1 {
+
+        font-size: 34px;
+
+        font-weight: normal;
+
+        margin: 0 0 10px;
+
+    }
+
+    .subtitle {
+
+        font-size: 17px;
+
+        font-style: italic;
+
+        opacity: 0.75;
+
+    }
+
+    .menu {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+    .menu-button {
+
+        width: 100%;
+
+        padding: 18px 20px;
+
+        background: rgba(255,255,255,0.55);
+
+        border: 1px solid rgba(41,37,31,0.18);
+
+        border-radius: 8px;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 16px;
+
+        text-align: left;
+
+        cursor: pointer;
+
+        transition: background 0.2s;
+
+    }
+
+    .menu-button:active {
+
+        background: rgba(255,255,255,0.9);
+
+    }
+
+    .menu-button span {
+
+        display: block;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 5px;
+
+        opacity: 0.6;
+
+    }
+
+    .section {
+
+        display: none;
+
+    }
+
+    .section.active {
+
+        display: block;
+
+    }
+
+    .section-header {
+
+        text-align: center;
+
+        padding: 24px 10px 30px;
+
+    }
+
+    .section-label {
+
+        font-size: 12px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+
+        opacity: 0.6;
+
+        margin-bottom: 12px;
+
+    }
+
+    h2 {
+
+        font-size: 29px;
+
+        font-weight: normal;
+
+        margin: 0;
+
+    }
+
+    .content {
+
+        background: rgba(255,255,255,0.45);
+
+        border-radius: 10px;
+
+        padding: 24px 22px;
+
+        line-height: 1.65;
+
+        font-size: 17px;
+
+    }
+
+    .content p {
+
+        margin: 0 0 18px;
+
+    }
+
+    .content p:last-child {
+
+        margin-bottom: 0;
+
+    }
+
+    .instruction {
+
+        padding: 18px;
+
+        margin: 20px 0;
+
+        border-left: 3px solid rgba(41,37,31,0.45);
+
+        background: rgba(255,255,255,0.35);
+
+    }
+
+    .instruction strong {
+
+        display: block;
+
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+
+        text-transform: uppercase;
+
+        margin-bottom: 8px;
+
+    }
+
+    .rule {
+
+        font-style: italic;
+
+        text-align: center;
+
+        padding: 22px 8px;
+
+        margin-top: 24px;
+
+        border-top: 1px solid rgba(41,37,31,0.15);
+
+    }
+
+    .back-button {
+
+        display: block;
+
+        width: 100%;
+
+        margin-top: 22px;
+
+        padding: 15px;
+
+        background: transparent;
+
+        border: 1px solid rgba(41,37,31,0.3);
+
+        border-radius: 8px;
+
+        color: #29251f;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 15px;
+
+        cursor: pointer;
+
+    }
+
+    .back-button:active {
+
+        background: rgba(255,255,255,0.5);
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="container">
+
+    <!-- MAIN MENU -->
+
+    <div id="menu">
+
+        <div class="header">
+
+            <div class="element">Your Element</div>
+
+            <h1>Spirit</h1>
+
+            <div class="subtitle">the Keeper of Memory</div>
+
+        </div>
+
+        <div class="menu">
+
+            <button class="menu-button" onclick="showSection('intro')">
+
+                <span>Begin here</span>
+
+                Introduction
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m1')">
+
+                <span>Movement I</span>
+
+                Abundance
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m2')">
+
+                <span>Movement II</span>
+
+                Imagination
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m3')">
+
+                <span>Movement III</span>
+
+                Connection
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m4')">
+
+                <span>Movement IV</span>
+
+                Fracture
+
+            </button>
+
+            <button class="menu-button" onclick="showSection('m5')">
+
+                <span>Movement V</span>
+
+                Return
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- INTRODUCTION -->
+
+    <div id="intro" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Your Element</div>
+
+            <h2>Spirit</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>You are Spirit, the one who keeps what might otherwise be forgotten.</p>
+
+            <p>Your task tonight is to hold the evening in a single moving memory.</p>
+
+            <div class="instruction">
+
+                <strong>Your tool</strong>
+
+                You will be entrusted with a GoPro.
+
+                <br><br>
+
+                It will create one continuous recording of the evening. You may start and stop the recording whenever you choose, but do not think of these as separate videos. Think of it as one memory, with moments allowed to enter and leave the frame.
+
+            </div>
+
+            <p>You do not need to record everything.</p>
+
+            <p>You are not making a documentary. You are not responsible for capturing every person, every conversation, or every beautiful thing.</p>
+
+            <div class="instruction">
+
+                <strong>Your other task</strong>
+
+                Notice.
+
+                <br><br>
+
+                When something feels worth remembering, let it enter the frame.
+
+                <br><br>
+
+                A gesture. A laugh. A hand moving through the food. A moment of concentration. The room changing. Someone listening. Something being made. Something ending.
+
+            </div>
+
+            <p>Sometimes you may simply let the camera rest and watch.</p>
+
+            <p>Sometimes the most important thing to remember may happen outside the frame.</p>
+
+            <div class="instruction">
+
+                <strong>Trust the sequence</strong>
+
+                You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
+
+            </div>
+
+            <p>Your role is intentionally quiet. Do not direct people into the frame or ask them to perform for it. Let the evening be what it is.</p>
+
+            <div class="rule">
+
+                You are not collecting proof that the evening happened.
+
+                You are keeping a trace of it.
+
+            </div>
+
+            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT I -->
+
+    <div id="m1" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement I</div>
+
+            <h2>Abundance</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Begin the recording when you feel the evening is ready to enter it.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                What does abundance look like when it is gathered around a table?
+
+            </div>
+
+            <p>You might notice the food arriving, hands reaching, people seeing something for the first time, or the small details that make the room feel alive.</p>
+
+            <p>Let the camera observe rather than direct.</p>
+
+            <div class="rule">
+
+                You cannot keep everything.
+
+                Notice what you would want to remember.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT II -->
+
+    <div id="m2" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement II</div>
+
+            <h2>Imagination</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Return to the recording when the next movement begins.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                What is being imagined into existence?
+
+            </div>
+
+            <p>Perhaps it is something being created by hand. Perhaps it is a look between people, an unexpected idea, or something that could not have existed before everyone gathered.</p>
+
+            <p>Let the camera remain curious.</p>
+
+            <div class="rule">
+
+                Imagination leaves traces before it becomes a thing.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT III -->
+
+    <div id="m3" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement III</div>
+
+            <h2>Connection</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Continue the recording when you feel there is something worth holding.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                Where can you see connection happening without anyone asking for it?
+
+            </div>
+
+            <p>Look for gestures, shared attention, laughter, hands working together, someone listening, or something passing from one person to another.</p>
+
+            <p>You do not need to capture faces to capture connection.</p>
+
+            <div class="rule">
+
+                Some things are remembered because they were seen.
+
+                Others because they were felt.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT IV -->
+
+    <div id="m4" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement IV</div>
+
+            <h2>Fracture</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>This movement may feel different from the others.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                What changes in the room?
+
+            </div>
+
+            <p>You do not need to record difficult moments simply because they are happening.</p>
+
+            <p>Be attentive to consent, privacy, and the dignity of the people in the room.</p>
+
+            <p>If something feels too intimate to place in the recording, let it remain outside the frame.</p>
+
+            <div class="rule">
+
+                Not everything that happens must be preserved.
+
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+    <!-- MOVEMENT V -->
+
+    <div id="m5" class="section">
+
+        <div class="section-header">
+
+            <div class="section-label">Movement V</div>
+
+            <h2>Return</h2>
+
+        </div>
+
+        <div class="content">
+
+            <p>Continue the recording as the evening begins to arrive somewhere new.</p>
+
+            <div class="instruction">
+
+                <strong>Notice</strong>
+
+                What would you want to remember from this moment?
+
+            </div>
+
+            <p>You may notice the smallest things now.</p>
+
+            <p>A hand around a warm cup. The movement of the room. Someone looking out a window. A moment of stillness.</p>
+
+            <p>Do not search for a grand ending. Let the camera notice what is actually there.</p>
+
+            <div class="rule">
+
+                Remembering does not require capturing everything.
+
+                It requires noticing.
+
+            </div>
+
+            <p>When the evening is truly finished, stop the recording.</p>
+
+        </div>
+
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+function showSection(sectionId) {
+
+    document.getElementById("menu").style.display = "none";
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById(sectionId).classList.add("active");
+
+    window.scrollTo(0, 0);
+
+}
+
+function showMenu() {
+
+    document.querySelectorAll(".section").forEach(function(section) {
+
+        section.classList.remove("active");
+
+    });
+
+    document.getElementById("menu").style.display = "block";
+
+    window.scrollTo(0, 0);
+
+}
+
+</script>
+
+</body>
+
+</html>
