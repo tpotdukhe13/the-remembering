@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html lang="en">
 
@@ -8,385 +8,335 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Water, the Reflector</title>
+<title>Water, the Receiver</title>
 
 <style>
 
-    * {
+    * {
 
-        box-sizing: border-box;
+        box-sizing: border-box;
 
-    }
+    }
 
-    body {
+    body {
 
-        margin: 0;
+        margin: 0;
 
-        min-height: 100vh;
+        min-height: 100vh;
 
-        background: #edf4f3;
+        background: #edf4f2;
 
-        color: #293433;
+        color: #29251f;
 
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: Georgia, "Times New Roman", serif;
 
-    }
+    }
 
-    .page {
+    .page {
 
-        min-height: 100vh;
+        min-height: 100vh;
 
-        display: flex;
+        display: flex;
 
-        justify-content: center;
+        justify-content: center;
 
-        padding: 32px 20px;
+        padding: 32px 20px;
 
-    }
+    }
 
-    .container {
+    .container {
 
-        width: 100%;
+        width: 100%;
 
-        max-width: 520px;
+        max-width: 520px;
 
-    }
+    }
 
-    .header {
+    .header {
 
-        text-align: center;
+        text-align: center;
 
-        padding: 28px 10px 30px;
+        padding: 28px 10px 30px;
 
-    }
+    }
 
-    .element {
+    .element {
 
-        font-size: 13px;
+        font-size: 13px;
 
-        letter-spacing: 4px;
+        letter-spacing: 4px;
 
-        text-transform: uppercase;
+        text-transform: uppercase;
 
-        margin-bottom: 12px;
+        margin-bottom: 12px;
 
-        opacity: 0.65;
+        opacity: 0.65;
 
-    }
+    }
 
-    h1 {
+    h1 {
 
-        font-size: 34px;
+        font-size: 34px;
 
-        font-weight: normal;
+        font-weight: normal;
 
-        margin: 0 0 10px;
+        margin: 0 0 10px;
 
-    }
+    }
 
-    .subtitle {
+    .subtitle {
 
-        font-size: 17px;
+        font-size: 17px;
 
-        font-style: italic;
+        font-style: italic;
 
-        opacity: 0.75;
+        opacity: 0.75;
 
-    }
+    }
 
-    .menu {
+    .menu {
 
-        display: flex;
+        display: flex;
 
-        flex-direction: column;
+        flex-direction: column;
 
-        gap: 12px;
+        gap: 12px;
 
-    }
+    }
 
-    .menu-button {
+    .menu-button {
 
-        width: 100%;
+        width: 100%;
 
-        padding: 18px 20px;
+        padding: 18px 20px;
 
-        background: rgba(255,255,255,0.55);
+        background: rgba(255,255,255,0.55);
 
-        border: 1px solid rgba(41,52,51,0.18);
+        border: 1px solid rgba(41,37,31,0.18);
 
-        border-radius: 8px;
+        border-radius: 8px;
 
-        color: #293433;
+        color: #29251f;
 
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: Georgia, "Times New Roman", serif;
 
-        font-size: 16px;
+        font-size: 16px;
 
-        text-align: left;
+        text-align: left;
 
-        cursor: pointer;
+        cursor: pointer;
 
-        transition: background 0.2s;
+        transition: background 0.2s;
 
-    }
+    }
 
-    .menu-button:active {
+    .menu-button:active {
 
-        background: rgba(255,255,255,0.9);
+        background: rgba(255,255,255,0.9);
 
-    }
+    }
 
-    .menu-button span {
+    .menu-button span {
 
-        display: block;
+        display: block;
 
-        font-size: 12px;
+        font-size: 12px;
 
-        letter-spacing: 2px;
+        letter-spacing: 2px;
 
-        margin-bottom: 5px;
+        margin-bottom: 5px;
 
-        opacity: 0.6;
+        opacity: 0.6;
 
-    }
+    }
 
-    .section {
+    .section {
 
-        display: none;
+        display: none;
 
-    }
+    }
 
-    .section.active {
+    .section.active {
 
-        display: block;
+        display: block;
 
-    }
+    }
 
-    .section-header {
+    .section-header {
 
-        text-align: center;
+        text-align: center;
 
-        padding: 24px 10px 30px;
+        padding: 24px 10px 30px;
 
-    }
+    }
 
-    .section-label {
+    .section-label {
 
-        font-size: 12px;
+        font-size: 12px;
 
-        letter-spacing: 3px;
+        letter-spacing: 3px;
 
-        text-transform: uppercase;
+        text-transform: uppercase;
 
-        opacity: 0.6;
+        opacity: 0.6;
 
-        margin-bottom: 12px;
+        margin-bottom: 12px;
 
-    }
+    }
 
-    h2 {
+    h2 {
 
-        font-size: 29px;
+        font-size: 29px;
 
-        font-weight: normal;
+        font-weight: normal;
 
-        margin: 0;
+        margin: 0;
 
-    }
+    }
 
-    .content {
+    .content {
 
-        background: rgba(255,255,255,0.45);
+        background: rgba(255,255,255,0.45);
 
-        border-radius: 10px;
+        border-radius: 10px;
 
-        padding: 24px 22px;
+        padding: 24px 22px;
 
-        line-height: 1.65;
+        line-height: 1.65;
 
-        font-size: 17px;
+        font-size: 17px;
 
-    }
+    }
 
-    .content p {
+    .content p {
 
-        margin: 0 0 18px;
+        margin: 0 0 18px;
 
-    }
+    }
 
-    .content p:last-child {
+    .content p:last-child {
 
-        margin-bottom: 0;
+        margin-bottom: 0;
 
-    }
+    }
 
-    .instruction {
+    .instruction {
 
-        padding: 18px;
+        padding: 18px;
 
-        margin: 20px 0;
+        margin: 20px 0;
 
-        border-left: 3px solid rgba(41,52,51,0.4);
+        border-left: 3px solid rgba(41,37,31,0.45);
 
-        background: rgba(255,255,255,0.35);
+        background: rgba(255,255,255,0.35);
 
-    }
+    }
 
-    .instruction strong {
+    .instruction strong {
 
-        display: block;
+        display: block;
 
-        font-size: 13px;
+        font-size: 13px;
 
-        letter-spacing: 1.5px;
+        letter-spacing: 1.5px;
 
-        text-transform: uppercase;
+        text-transform: uppercase;
 
-        margin-bottom: 8px;
+        margin-bottom: 8px;
 
-    }
+    }
 
-    .focus {
+    .rule {
 
-        display: none;
+        font-style: italic;
 
-        padding: 20px;
+        text-align: center;
 
-        margin: 20px 0;
+        padding: 22px 8px;
 
-        border-left: 3px solid rgba(41,52,51,0.45);
+        margin-top: 24px;
 
-        background: rgba(255,255,255,0.55);
+        border-top: 1px solid rgba(41,37,31,0.15);
 
-    }
+    }
 
-    .focus.visible {
+    .buttons {
 
-        display: block;
+        display: flex;
 
-    }
+        gap: 10px;
 
-    .focus-label {
+        margin-top: 22px;
 
-        display: block;
+    }
 
-        font-size: 12px;
+    .back-button,
 
-        letter-spacing: 2px;
+    .question-button {
 
-        text-transform: uppercase;
+        flex: 1;
 
-        margin-bottom: 10px;
+        padding: 15px;
 
-        opacity: 0.6;
+        background: transparent;
 
-    }
+        border: 1px solid rgba(41,37,31,0.3);
 
-    .focus-element {
+        border-radius: 8px;
 
-        font-size: 24px;
+        color: #29251f;
 
-        margin-bottom: 10px;
+        font-family: Georgia, "Times New Roman", serif;
 
-    }
+        font-size: 15px;
 
-    .focus p {
+        cursor: pointer;
 
-        margin: 0;
+    }
 
-    }
+    .back-button:active,
 
-    .reveal-button {
+    .question-button:active {
 
-        display: block;
+        background: rgba(255,255,255,0.5);
 
-        width: 100%;
+    }
 
-        margin-top: 22px;
+    .question {
 
-        padding: 15px;
+        display: none;
 
-        background: rgba(255,255,255,0.55);
+        margin-top: 18px;
 
-        border: 1px solid rgba(41,52,51,0.3);
+        padding: 18px;
 
-        border-radius: 8px;
+        background: rgba(255,255,255,0.5);
 
-        color: #293433;
+        border-radius: 8px;
 
-        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.6;
 
-        font-size: 15px;
+    }
 
-        cursor: pointer;
+    .question.active {
 
-    }
+        display: block;
 
-    .reveal-button:active {
+    }
 
-        background: rgba(255,255,255,0.9);
+    .question strong {
 
-    }
+        display: block;
 
-    .button-row {
+        font-size: 13px;
 
-        display: flex;
+        letter-spacing: 1.5px;
 
-        gap: 10px;
+        text-transform: uppercase;
 
-        margin-top: 22px;
+        margin-bottom: 8px;
 
-    }
-
-    .button-row .reveal-button {
-
-        margin-top: 0;
-
-        flex: 1;
-
-    }
-
-    .back-button {
-
-        flex: 1;
-
-        padding: 15px;
-
-        background: transparent;
-
-        border: 1px solid rgba(41,52,51,0.3);
-
-        border-radius: 8px;
-
-        color: #293433;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 15px;
-
-        cursor: pointer;
-
-    }
-
-    .back-button:active {
-
-        background: rgba(255,255,255,0.5);
-
-    }
-
-    .rule {
-
-        font-style: italic;
-
-        text-align: center;
-
-        padding: 22px 8px;
-
-        margin-top: 24px;
-
-        border-top: 1px solid rgba(41,52,51,0.15);
-
-    }
+    }
 
 </style>
 
@@ -398,407 +348,447 @@
 
 <div class="container">
 
-    <!-- MAIN MENU -->
+    <!-- MAIN MENU -->
 
-    <div id="menu">
+    <div id="menu">
 
-        <div class="header">
+        <div class="header">
 
-            <div class="element">Your Element</div>
+            <div class="element">Your Element</div>
 
-            <h1>Water</h1>
+            <h1>Water</h1>
 
-            <div class="subtitle">the Reflector</div>
+            <div class="subtitle">the Receiver</div>
 
-        </div>
+        </div>
 
-        <div class="menu">
+        <div class="menu">
 
-            <button class="menu-button" onclick="showSection('intro')">
+            <button class="menu-button" onclick="showSection('intro')">
 
-                <span>Begin here</span>
+                <span>Begin here</span>
 
-                Introduction
+                Introduction
 
-            </button>
+            </button>
 
-            <button class="menu-button" onclick="showSection('m1')">
+            <button class="menu-button" onclick="showSection('m1')">
 
-                <span>Movement I</span>
+                <span>Movement I</span>
 
-                Abundance
+                Abundance
 
-            </button>
+            </button>
 
-            <button class="menu-button" onclick="showSection('m2')">
+            <button class="menu-button" onclick="showSection('m2')">
 
-                <span>Movement II</span>
+                <span>Movement II</span>
 
-                Imagination
+                Imagination
 
-            </button>
+            </button>
 
-            <button class="menu-button" onclick="showSection('m3')">
+            <button class="menu-button" onclick="showSection('m3')">
 
-                <span>Movement III</span>
+                <span>Movement III</span>
 
-                Connection
+                Connection
 
-            </button>
+            </button>
 
-            <button class="menu-button" onclick="showSection('m4')">
+            <button class="menu-button" onclick="showSection('m4')">
 
-                <span>Movement IV</span>
+                <span>Movement IV</span>
 
-                Fracture
+                Fracture
 
-            </button>
+            </button>
 
-            <button class="menu-button" onclick="showSection('m5')">
+            <button class="menu-button" onclick="showSection('m5')">
 
-                <span>Movement V</span>
+                <span>Movement V</span>
 
-                Return
+                Return
 
-            </button>
+            </button>
 
-        </div>
+        </div>
 
-    </div>
+    </div>
 
-    <!-- INTRODUCTION -->
+    <!-- INTRODUCTION -->
 
-    <div id="intro" class="section">
+    <div id="intro" class="section">
 
-        <div class="section-header">
+        <div class="section-header">
 
-            <div class="section-label">Your Element</div>
+            <div class="section-label">Your Element</div>
 
-            <h2>Water</h2>
+            <h2>Water</h2>
 
-        </div>
+        </div>
 
-        <div class="content">
+        <div class="content">
 
-            <p>You are Water, the one that moves between things.</p>
+            <p>You are Water, the one that receives.</p>
 
-            <p>You reflect. You carry. You connect. You find the places beneath the surface.</p>
+            <p>You move through everything. You gather, carry, nourish, reflect, and return.</p>
 
-            <p>Your role is simple: <strong>listen, and let something go a little deeper.</strong></p>
+            <div class="instruction">
 
-            <div class="instruction">
+                <strong>Your role</strong>
 
-                <strong>Your task</strong>
+                Listen. Notice what is offered. When the moment comes, let something go a little deeper.
 
-                In each movement, you will be asked to listen especially closely to one other element.
+            </div>
 
-            </div>
+            <p>You will be entrusted with a small chalice for the evening.</p>
 
-            <p>When that element speaks, acts, or offers something to the room, pay attention.</p>
+            <p>At certain moments, you will also be asked to listen closely to someone else's experience.</p>
 
-            <p>If a moment presents itself, ask that person one conversational follow-up question. Let the question come from what they have actually said or done.</p>
+            <div class="instruction">
 
-            <div class="instruction">
+                <strong>A small rule</strong>
 
-                <strong>Nothing scripted</strong>
+                You are not given a question to ask in advance. Instead, you are given someone to listen to. Let their words, actions, or presence give you the question.
 
-                You are not given a question to ask. You are given someone to listen to.
+            </div>
 
-            </div>
+            <p>Each movement asks you to listen to a different element. When the moment feels right, ask that person one genuine follow-up question.</p>
 
-            <p>You do not need to force the moment. You do not need to make the conversation deeper than it naturally wants to go.</p>
+            <p>Then let the conversation continue naturally. You do not need to manage it, explain it, or keep it going.</p>
 
-            <div class="instruction">
+            <div class="instruction">
 
-                <strong>Trust the sequence</strong>
+                <strong>Trust the sequence</strong>
 
-                You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
+                You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
 
-            </div>
+            </div>
 
-            <div class="rule">
+            <div class="rule">
 
-                Listen closely. Ask once. Then let the conversation flow.
+                Receive first. Respond second. Then return to being a guest.
 
-            </div>
+            </div>
 
-            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
+            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
 
-        </div>
+        </div>
 
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+        <button class="back-button" onclick="showMenu()">Return to Menu</button>
 
-    </div>
+    </div>
 
-    <!-- MOVEMENT I -->
+    <!-- MOVEMENT I -->
 
-    <div id="m1" class="section">
+    <div id="m1" class="section">
 
-        <div class="section-header">
+        <div class="section-header">
 
-            <div class="section-label">Movement I</div>
+            <div class="section-label">Movement I</div>
 
-            <h2>Abundance</h2>
+            <h2>Abundance</h2>
 
-        </div>
+        </div>
 
-        <div class="content">
+        <div class="content">
 
-            <p>For this movement, listen especially closely to:</p>
+            <p>Listen closely to <strong>Earth</strong> during this movement.</p>
 
-            <div id="f1" class="focus">
+            <div class="instruction">
 
-                <span class="focus-label">Your focus</span>
+                <strong>Your invitation</strong>
 
-                <div class="focus-element">Earth</div>
+                Notice something Earth says or does that reveals how they are experiencing their role tonight.
 
-                <p>Listen for something Earth says or does that reveals how they are experiencing their role tonight.</p>
+            </div>
 
-            </div>
+            <p>When the moment feels natural, ask Earth one genuine follow-up question about what you noticed.</p>
 
-            <button class="reveal-button" onclick="revealFocus('f1', this)">
+            <p>Then let the conversation continue without directing it.</p>
 
-                Reveal Focus
+            <div class="rule">
 
-            </button>
+                Receive what is offered. Then return to the table.
 
-            <p>When a natural moment presents itself, ask Earth <strong>one follow-up question</strong> based on what they have just shared or done.</p>
+            </div>
 
-            <div class="rule">
+        </div>
 
-                Do not prepare the question in advance. Let Earth give you the question.
+        <div class="buttons">
 
-            </div>
+            <button class="question-button" onclick="revealQuestion('q1')">
 
-            <div class="button-row">
+                Reveal Question
 
-                <button class="back-button" onclick="showMenu()">
+            </button>
 
-                    Return to Menu
+            <button class="back-button" onclick="showMenu()">
 
-                </button>
+                Return to Menu
 
-            </div>
+            </button>
 
-        </div>
+        </div>
 
-    </div>
+        <div id="q1" class="question">
 
-    <!-- MOVEMENT II -->
+            <strong>Your question</strong>
 
-    <div id="m2" class="section">
+            Ask Earth something that naturally follows from what they have shared or done.
 
-        <div class="section-header">
+        </div>
 
-            <div class="section-label">Movement II</div>
+    </div>
 
-            <h2>Imagination</h2>
+    <!-- MOVEMENT II -->
 
-        </div>
+    <div id="m2" class="section">
 
-        <div class="content">
+        <div class="section-header">
 
-            <p>For this movement, listen especially closely to:</p>
+            <div class="section-label">Movement II</div>
 
-            <div id="f2" class="focus">
+            <h2>Imagination</h2>
 
-                <span class="focus-label">Your focus</span>
+        </div>
 
-                <div class="focus-element">Air</div>
+        <div class="content">
 
-                <p>Listen for something Air says or does that reveals how they are experiencing their role tonight.</p>
+            <p>Listen closely to <strong>Air</strong> during this movement.</p>
 
-            </div>
+            <div class="instruction">
 
-            <button class="reveal-button" onclick="revealFocus('f2', this)">
+                <strong>Your invitation</strong>
 
-                Reveal Focus
+                Notice something Air says or does that reveals how they are experiencing their role tonight.
 
-            </button>
+            </div>
 
-            <p>When a natural moment presents itself, ask Air <strong>one follow-up question</strong> based on what they have just shared or done.</p>
+            <p>When the moment feels natural, ask Air one genuine follow-up question about what you noticed.</p>
 
-            <div class="rule">
+            <p>Then let the conversation continue without directing it.</p>
 
-                Do not prepare the question in advance. Let Air give you the question.
+            <div class="rule">
 
-            </div>
+                Receive what is offered. Then return to the table.
 
-            <div class="button-row">
+            </div>
 
-                <button class="back-button" onclick="showMenu()">
+        </div>
 
-                    Return to Menu
+        <div class="buttons">
 
-                </button>
+            <button class="question-button" onclick="revealQuestion('q2')">
 
-            </div>
+                Reveal Question
 
-        </div>
+            </button>
 
-    </div>
+            <button class="back-button" onclick="showMenu()">
 
-    <!-- MOVEMENT III -->
+                Return to Menu
 
-    <div id="m3" class="section">
+            </button>
 
-        <div class="section-header">
+        </div>
 
-            <div class="section-label">Movement III</div>
+        <div id="q2" class="question">
 
-            <h2>Connection</h2>
+            <strong>Your question</strong>
 
-        </div>
+            Ask Air something that naturally follows from what they have shared or done.
 
-        <div class="content">
+        </div>
 
-            <p>For this movement, listen especially closely to:</p>
+    </div>
 
-            <div id="f3" class="focus">
+    <!-- MOVEMENT III -->
 
-                <span class="focus-label">Your focus</span>
+    <div id="m3" class="section">
 
-                <div class="focus-element">Fire</div>
+        <div class="section-header">
 
-                <p>Listen for something Fire says or does that reveals how they are experiencing their role tonight.</p>
+            <div class="section-label">Movement III</div>
 
-            </div>
+            <h2>Connection</h2>
 
-            <button class="reveal-button" onclick="revealFocus('f3', this)">
+        </div>
 
-                Reveal Focus
+        <div class="content">
 
-            </button>
+            <p>Listen closely to <strong>Fire</strong> during this movement.</p>
 
-            <p>When a natural moment presents itself, ask Fire <strong>one follow-up question</strong> based on what they have just shared or done.</p>
+            <div class="instruction">
 
-            <div class="rule">
+                <strong>Your invitation</strong>
 
-                Follow what is actually happening, rather than what you expected to happen.
+                Notice something Fire says or does that reveals how they are experiencing their role tonight.
 
-            </div>
+            </div>
 
-            <div class="button-row">
+            <p>When the moment feels natural, ask Fire one genuine follow-up question about what you noticed.</p>
 
-                <button class="back-button" onclick="showMenu()">
+            <p>Then let the conversation continue without directing it.</p>
 
-                    Return to Menu
+            <div class="rule">
 
-                </button>
+                Receive what is offered. Then return to the table.
 
-            </div>
+            </div>
 
-        </div>
+        </div>
 
-    </div>
+        <div class="buttons">
 
-    <!-- MOVEMENT IV -->
+            <button class="question-button" onclick="revealQuestion('q3')">
 
-    <div id="m4" class="section">
+                Reveal Question
 
-        <div class="section-header">
+            </button>
 
-            <div class="section-label">Movement IV</div>
+            <button class="back-button" onclick="showMenu()">
 
-            <h2>Fracture</h2>
+                Return to Menu
 
-        </div>
+            </button>
 
-        <div class="content">
+        </div>
 
-            <p>For this movement, listen especially closely to:</p>
+        <div id="q3" class="question">
 
-            <div id="f4" class="focus">
+            <strong>Your question</strong>
 
-                <span class="focus-label">Your focus</span>
+            Ask Fire something that naturally follows from what they have shared or done.
 
-                <div class="focus-element">Space</div>
+        </div>
 
-                <p>Listen for something Space says or does that reveals how they are experiencing their role tonight.</p>
+    </div>
 
-            </div>
+    <!-- MOVEMENT IV -->
 
-            <button class="reveal-button" onclick="revealFocus('f4', this)">
+    <div id="m4" class="section">
 
-                Reveal Focus
+        <div class="section-header">
 
-            </button>
+            <div class="section-label">Movement IV</div>
 
-            <p>When a natural moment presents itself, ask Space <strong>one follow-up question</strong> based on what they have just shared or done.</p>
+            <h2>Fracture</h2>
 
-            <div class="rule">
+        </div>
 
-                You are listening for what is underneath the words, not searching for the perfect question.
+        <div class="content">
 
-            </div>
+            <p>Listen closely to <strong>Space</strong> during this movement.</p>
 
-            <div class="button-row">
+            <div class="instruction">
 
-                <button class="back-button" onclick="showMenu()">
+                <strong>Your invitation</strong>
 
-                    Return to Menu
+                Notice something Space says or does that reveals how they are experiencing their role tonight.
 
-                </button>
+            </div>
 
-            </div>
+            <p>When the moment feels natural, ask Space one genuine follow-up question about what you noticed.</p>
 
-        </div>
+            <p>Then let the conversation continue without directing it.</p>
 
-    </div>
+            <div class="rule">
 
-    <!-- MOVEMENT V -->
+                Receive what is offered. Then return to the table.
 
-    <div id="m5" class="section">
+            </div>
 
-        <div class="section-header">
+        </div>
 
-            <div class="section-label">Movement V</div>
+        <div class="buttons">
 
-            <h2>Return</h2>
+            <button class="question-button" onclick="revealQuestion('q4')">
 
-        </div>
+                Reveal Question
 
-        <div class="content">
+            </button>
 
-            <p>For this movement, listen especially closely to:</p>
+            <button class="back-button" onclick="showMenu()">
 
-            <div id="f5" class="focus">
+                Return to Menu
 
-                <span class="focus-label">Your focus</span>
+            </button>
 
-                <div class="focus-element">Spirit</div>
+        </div>
 
-                <p>Listen for something Spirit says or does that reveals how they are experiencing their role tonight.</p>
+        <div id="q4" class="question">
 
-            </div>
+            <strong>Your question</strong>
 
-            <button class="reveal-button" onclick="revealFocus('f5', this)">
+            Ask Space something that naturally follows from what they have shared or done.
 
-                Reveal Focus
+        </div>
 
-            </button>
+    </div>
 
-            <p>When a natural moment presents itself, ask Spirit <strong>one follow-up question</strong> based on what they have just shared or done.</p>
+    <!-- MOVEMENT V -->
 
-            <div class="rule">
+    <div id="m5" class="section">
 
-                The evening is almost over. Let the question be small enough to leave something behind.
+        <div class="section-header">
 
-            </div>
+            <div class="section-label">Movement V</div>
 
-            <div class="button-row">
+            <h2>Return</h2>
 
-                <button class="back-button" onclick="showMenu()">
+        </div>
 
-                    Return to Menu
+        <div class="content">
 
-                </button>
+            <p>Listen closely to <strong>Spirit</strong> during this movement.</p>
 
-            </div>
+            <div class="instruction">
 
-        </div>
+                <strong>Your invitation</strong>
 
-    </div>
+                Notice something Spirit says or does that reveals how they are experiencing their role tonight.
+
+            </div>
+
+            <p>When the moment feels natural, ask Spirit one genuine follow-up question about what you noticed.</p>
+
+            <p>Then let the conversation continue without directing it.</p>
+
+            <div class="rule">
+
+                Receive what is offered. Then return to the table.
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="question-button" onclick="revealQuestion('q5')">
+
+                Reveal Question
+
+            </button>
+
+            <button class="back-button" onclick="showMenu()">
+
+                Return to Menu
+
+            </button>
+
+        </div>
+
+        <div id="q5" class="question">
+
+            <strong>Your question</strong>
+
+            Ask Spirit something that naturally follows from what they have shared or done.
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -808,42 +798,42 @@
 
 function showSection(sectionId) {
 
-    document.getElementById("menu").style.display = "none";
+    document.getElementById("menu").style.display = "none";
 
-    document.querySelectorAll(".section").forEach(function(section) {
+    document.querySelectorAll(".section").forEach(function(section) {
 
-        section.classList.remove("active");
+        section.classList.remove("active");
 
-    });
+    });
 
-    document.getElementById(sectionId).classList.add("active");
+    document.getElementById(sectionId).classList.add("active");
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
 }
 
 function showMenu() {
 
-    document.querySelectorAll(".section").forEach(function(section) {
+    document.querySelectorAll(".section").forEach(function(section) {
 
-        section.classList.remove("active");
+        section.classList.remove("active");
 
-    });
+    });
 
-    document.getElementById("menu").style.display = "block";
+    document.getElementById("menu").style.display = "block";
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
 }
 
-function revealFocus(focusId, button) {
+function revealQuestion(questionId) {
 
-    document.getElementById(focusId).classList.add("visible");
-
-    button.style.display = "none";
+    document.getElementById(questionId).classList.toggle("active");
 
 }
 
 </script>
 
 </body>
+
+</html>
