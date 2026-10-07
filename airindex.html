@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -12,285 +11,170 @@
 
 <style>
 
-    * {
-
-        box-sizing: border-box;
-
-    }
-
-    body {
-
-        margin: 0;
-
-        min-height: 100vh;
-
-        background: #f4f0e8;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-    }
-
-    .page {
-
-        min-height: 100vh;
-
-        display: flex;
-
-        justify-content: center;
-
-        padding: 32px 20px;
-
-    }
-
-    .container {
-
-        width: 100%;
-
-        max-width: 520px;
-
-    }
-
-    .header {
-
-        text-align: center;
-
-        padding: 28px 10px 30px;
-
-    }
-
-    .element {
-
-        font-size: 13px;
-
-        letter-spacing: 4px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 12px;
-
-        opacity: 0.65;
-
-    }
-
-    h1 {
-
-        font-size: 34px;
-
-        font-weight: normal;
-
-        margin: 0 0 10px;
-
-    }
-
-    .subtitle {
-
-        font-size: 17px;
-
-        font-style: italic;
-
-        opacity: 0.75;
-
-    }
-
-    .menu {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 12px;
-
-    }
-
-    .menu-button {
-
-        width: 100%;
-
-        padding: 18px 20px;
-
-        background: rgba(255,255,255,0.55);
-
-        border: 1px solid rgba(41,37,31,0.18);
-
-        border-radius: 8px;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 16px;
-
-        text-align: left;
-
-        cursor: pointer;
-
-        transition: background 0.2s;
-
-    }
-
-    .menu-button:active {
-
-        background: rgba(255,255,255,0.9);
-
-    }
-
-    .menu-button span {
-
-        display: block;
-
-        font-size: 12px;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 5px;
-
-        opacity: 0.6;
-
-    }
-
-    .section {
-
-        display: none;
-
-    }
-
-    .section.active {
-
-        display: block;
-
-    }
-
-    .section-header {
-
-        text-align: center;
-
-        padding: 24px 10px 30px;
-
-    }
-
-    .section-label {
-
-        font-size: 12px;
-
-        letter-spacing: 3px;
-
-        text-transform: uppercase;
-
-        opacity: 0.6;
-
-        margin-bottom: 12px;
-
-    }
-
-    h2 {
-
-        font-size: 29px;
-
-        font-weight: normal;
-
-        margin: 0;
-
-    }
-
-    .content {
-
-        background: rgba(255,255,255,0.45);
-
-        border-radius: 10px;
-
-        padding: 24px 22px;
-
-        line-height: 1.65;
-
-        font-size: 17px;
-
-    }
-
-    .content p {
-
-        margin: 0 0 18px;
-
-    }
-
-    .content p:last-child {
-
-        margin-bottom: 0;
-
-    }
-
-    .instruction {
-
-        padding: 18px;
-
-        margin: 20px 0;
-
-        border-left: 3px solid rgba(41,37,31,0.45);
-
-        background: rgba(255,255,255,0.35);
-
-    }
-
-    .instruction strong {
-
-        display: block;
-
-        font-size: 13px;
-
-        letter-spacing: 1.5px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 8px;
-
-    }
-
-    .rule {
-
-        font-style: italic;
-
-        text-align: center;
-
-        padding: 22px 8px;
-
-        margin-top: 24px;
-
-        border-top: 1px solid rgba(41,37,31,0.15);
-
-    }
-
-    .back-button {
-
-        display: block;
-
-        width: 100%;
-
-        margin-top: 22px;
-
-        padding: 15px;
-
-        background: transparent;
-
-        border: 1px solid rgba(41,37,31,0.3);
-
-        border-radius: 8px;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 15px;
-
-        cursor: pointer;
-
-    }
-
-    .back-button:active {
-
-        background: rgba(255,255,255,0.5);
-
-    }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f0e8;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+.header {
+    text-align: center;
+    padding: 28px 10px 30px;
+}
+
+.element {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: .65;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+.subtitle {
+    font-size: 17px;
+    font-style: italic;
+    opacity: .75;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-button {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(41,37,31,.18);
+    border-radius: 8px;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.menu-button:active {
+    background: rgba(255,255,255,.9);
+}
+
+.menu-button span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    opacity: .6;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section-header {
+    text-align: center;
+    padding: 24px 10px 30px;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 29px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.content {
+    background: rgba(255,255,255,.45);
+    border-radius: 10px;
+    padding: 24px 22px;
+    line-height: 1.65;
+    font-size: 17px;
+}
+
+.content p {
+    margin: 0 0 18px;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.instruction {
+    padding: 18px;
+    margin: 20px 0;
+    border-left: 3px solid rgba(41,37,31,.45);
+    background: rgba(255,255,255,.35);
+}
+
+.instruction strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.rule {
+    font-style: italic;
+    text-align: center;
+    padding: 22px 8px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(41,37,31,.15);
+}
+
+.back-button {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgba(41,37,31,.3);
+    border-radius: 8px;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.back-button:active {
+    background: rgba(255,255,255,.5);
+}
 
 </style>
 
@@ -302,343 +186,323 @@
 
 <div class="container">
 
-    <!-- MAIN MENU -->
 
-    <div id="menu">
+<!-- MENU -->
 
-        <div class="header">
+<div id="menu">
 
-            <div class="element">Your Element</div>
+    <div class="header">
 
-            <h1>Air</h1>
+        <div class="element">Your Element</div>
 
-            <div class="subtitle">the Carrier</div>
+        <h1>Air</h1>
 
-        </div>
-
-        <div class="menu">
-
-            <button class="menu-button" onclick="showSection('intro')">
-
-                <span>Begin here</span>
-
-                Introduction
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m1')">
-
-                <span>Movement I</span>
-
-                Abundance
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m2')">
-
-                <span>Movement II</span>
-
-                Imagination
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m3')">
-
-                <span>Movement III</span>
-
-                Connection
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m4')">
-
-                <span>Movement IV</span>
-
-                Fracture
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m5')">
-
-                <span>Movement V</span>
-
-                Return
-
-            </button>
-
-        </div>
+        <div class="subtitle">the Carrier</div>
 
     </div>
 
-    <!-- INTRODUCTION -->
-
-    <div id="intro" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Your Element</div>
-
-            <h2>Air</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>You are Air, the invisible one, moving through everything.</p>
-
-            <p>Breath. Sound. Scent. Music. Words. Silence. The things we cannot hold, but that can still move us.</p>
-
-            <p>Your role is simple: <strong>carry the question.</strong></p>
-
-            <div class="instruction">
-
-                <strong>Your first task</strong>
-
-                During the music, quietly give everyone their reflection card. Let the question arrive without announcement.
-
-            </div>
-
-            <p>You will also be asked to notice another element during each movement.</p>
-
-            <div class="instruction">
-
-                <strong>Your second task</strong>
-
-                Watch what that element does. Notice what thought or idea it stirs in you. Then breathe air into it. Let it grow, change shape, wander, or become something you had not imagined before.
-
-            </div>
-
-            <p>You do not need to explain the question, lead the reflection, or ask anyone to share.</p>
-
-            <p>Your role is intentionally small. You do not need to manage the evening, explain your element, or anticipate what anyone else needs from you.</p>
-
-            <div class="rule">
-
-                Carry the question. Follow the thought. Then return to the experience and be a guest.
-
-            </div>
-
-            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
-
-    </div>
-
-    <!-- MOVEMENT I -->
-
-    <div id="m1" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Movement I</div>
-
-            <h2>Abundance</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>During the music, quietly give everyone their reflection card.</p>
-
-            <div class="instruction">
-
-                <strong>Observe Spirit</strong>
-
-                Watch what Spirit does in this movement.
-
-            </div>
-
-            <p>Notice what thought or idea arises from watching.</p>
-
-            <p>Choose one and breathe air into it. Let it expand. Imagine where it could go, what it could become, or what else it might contain.</p>
-
-            <div class="rule">
-
-                Let one small thought become more than it was.
-
-            </div>
-
-            <p>Then return to the experience and be a guest.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
-
-    </div>
-
-    <!-- MOVEMENT II -->
-
-    <div id="m2" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Movement II</div>
-
-            <h2>Imagination</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>During the music, quietly give everyone their reflection card.</p>
-
-            <div class="instruction">
-
-                <strong>Observe Space</strong>
-
-                Watch what Space makes possible in this movement.
-
-            </div>
-
-            <p>Notice what thought or idea arises from watching.</p>
-
-            <p>Choose one and breathe air into it. Imagine where it could go, what it could become, or how it might change when given room.</p>
-
-            <div class="rule">
-
-                Give the thought somewhere to go.
-
-            </div>
-
-            <p>Then return to the experience and be a guest.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
-
-    </div>
-
-    <!-- MOVEMENT III -->
-
-    <div id="m3" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Movement III</div>
-
-            <h2>Connection</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>During the music, quietly give everyone their reflection card.</p>
-
-            <div class="instruction">
-
-                <strong>Observe Earth</strong>
-
-                Watch how Earth grounds the movement.
-
-            </div>
-
-            <p>Notice what thought or idea arises from watching.</p>
-
-            <p>Choose one and breathe air into it. Follow its roots, its branches, or the places it might connect to something else.</p>
-
-            <div class="rule">
-
-                Let one thought find its roots and its branches.
-
-            </div>
-
-            <p>Then return to the experience and be a guest.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
-
-    </div>
-
-    <!-- MOVEMENT IV -->
-
-    <div id="m4" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Movement IV</div>
-
-            <h2>Fracture</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>During the music, quietly give everyone their reflection card.</p>
-
-            <div class="instruction">
-
-                <strong>Observe Fire</strong>
-
-                Watch what Fire changes in this movement.
-
-            </div>
-
-            <p>Notice what thought or idea arises from watching.</p>
-
-            <p>Choose one and breathe air into it. Let it transform. Imagine what might be revealed, released, marked, or made possible through change.</p>
-
-            <div class="rule">
-
-                Let the thought change shape.
-
-            </div>
-
-            <p>Then return to the experience and be a guest.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
-
-    </div>
-
-    <!-- MOVEMENT V -->
-
-    <div id="m5" class="section">
-
-        <div class="section-header">
-
-            <div class="section-label">Movement V</div>
-
-            <h2>Return</h2>
-
-        </div>
-
-        <div class="content">
-
-            <p>During the music, quietly give everyone their reflection card.</p>
-
-            <div class="instruction">
-
-                <strong>Observe Water</strong>
-
-                Watch how Water moves through this final movement.
-
-            </div>
-
-            <p>Notice what thought or idea arises from watching.</p>
-
-            <p>Choose one and breathe air into it. Follow it toward whatever it might become, carry, nourish, remember, or return to.</p>
-
-            <div class="rule">
-
-                Let the thought find its way home.
-
-            </div>
-
-            <p>Then return to the experience and be a guest.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+    <div class="menu">
+
+        <button class="menu-button" onclick="showSection('intro')">
+            <span>Begin here</span>
+            Introduction
+        </button>
+
+        <button class="menu-button" onclick="showSection('m1')">
+            <span>Movement I</span>
+        </button>
+
+        <button class="menu-button" onclick="showSection('m2')">
+            <span>Movement II</span>
+        </button>
+
+        <button class="menu-button" onclick="showSection('m3')">
+            <span>Movement III</span>
+        </button>
+
+        <button class="menu-button" onclick="showSection('m4')">
+            <span>Movement IV</span>
+        </button>
+
+        <button class="menu-button" onclick="showSection('m5')">
+            <span>Movement V</span>
+        </button>
 
     </div>
 
 </div>
 
+
+<!-- INTRODUCTION -->
+
+<div id="intro" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Your Element</div>
+
+        <h2>Air</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>You are Air, the invisible one, moving through everything.</p>
+
+        <p>Breath. Sound. Scent. Music. Words. Silence. The things we cannot hold, but that can still move us.</p>
+
+        <p>Your role is simple: <strong>carry the question.</strong></p>
+
+        <div class="instruction">
+
+            <strong>Your first task</strong>
+
+            During the music, quietly give everyone their reflection card. Let the question arrive without announcement.
+
+        </div>
+
+        <p>You will also be asked to notice another element during each movement.</p>
+
+        <div class="instruction">
+
+            <strong>Your second task</strong>
+
+            Watch what that element does. Notice what thought or idea it stirs in you. Then breathe air into it. Let it grow, change shape, wander, or become something you had not imagined before.
+
+        </div>
+
+        <p>You do not need to explain the question, lead the reflection, or ask anyone to share.</p>
+
+        <p>Before we begin, you will have five minutes with Nature in the kitchen. Use that time to ask questions, become familiar with your role, and learn anything you need to know. Once we begin, trust the sequence. Your instructions will be waiting here when you need them.</p>
+
+        <div class="instruction">
+
+            <strong>Trust the sequence</strong>
+
+            You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
+
+            <br><br>
+
+            Before each movement begins, open its instructions. Read them before the movement starts so you know what to notice, what to do, and when to act. Then return to the experience.
+
+        </div>
+
+        <p>Your role is intentionally small. You do not need to manage the evening, explain your element, or anticipate what anyone else needs from you.</p>
+
+        <div class="rule">
+
+            Carry the question. Follow the thought. Then return to the experience and be a guest.
+
+        </div>
+
+        <p style="text-align:center;font-style:italic;">Don’t peek.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
 </div>
+
+
+<!-- MOVEMENT I -->
+
+<div id="m1" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement I</div>
+
+        <h2>Abundance</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>During the music, quietly give everyone their reflection card.</p>
+
+        <div class="instruction">
+
+            <strong>Observe Spirit</strong>
+
+            Watch what Spirit does in this movement.
+
+        </div>
+
+        <p>Notice what thought or idea arises from watching.</p>
+
+        <p>Choose one and breathe air into it. Let it expand. Imagine where it could go, what it could become, or what else it might contain.</p>
+
+        <p>Let one small thought become more than it was.</p>
+
+        <p>Then return to the experience and be a guest.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+<!-- MOVEMENT II -->
+
+<div id="m2" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement II</div>
+
+        <h2>Imagination</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>During the music, quietly give everyone their reflection card.</p>
+
+        <div class="instruction">
+
+            <strong>Observe Space</strong>
+
+            Watch what Space makes possible in this movement.
+
+        </div>
+
+        <p>Notice what thought or idea arises from watching.</p>
+
+        <p>Choose one and breathe air into it. Imagine where it could go, what it could become, or how it might change when given room.</p>
+
+        <p>Give the thought somewhere to go.</p>
+
+        <p>Then return to the experience and be a guest.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+<!-- MOVEMENT III -->
+
+<div id="m3" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement III</div>
+
+        <h2>Connection</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>During the music, quietly give everyone their reflection card.</p>
+
+        <div class="instruction">
+
+            <strong>Observe Earth</strong>
+
+            Watch how Earth grounds the movement.
+
+        </div>
+
+        <p>Notice what thought or idea arises from watching.</p>
+
+        <p>Choose one and breathe air into it. Follow its roots, its branches, or the places it might connect to something else.</p>
+
+        <p>Let one thought find its roots and its branches.</p>
+
+        <p>Then return to the experience and be a guest.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+<!-- MOVEMENT IV -->
+
+<div id="m4" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement IV</div>
+
+        <h2>Fracture</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>During the music, quietly give everyone their reflection card.</p>
+
+        <div class="instruction">
+
+            <strong>Observe Fire</strong>
+
+            Watch what Fire changes in this movement.
+
+        </div>
+
+        <p>Notice what thought or idea arises from watching.</p>
+
+        <p>Choose one and breathe air into it. Let it transform. Imagine what might be revealed, released, marked, or made possible through change.</p>
+
+        <p>Let the thought change shape.</p>
+
+        <p>Then return to the experience and be a guest.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+<!-- MOVEMENT V -->
+
+<div id="m5" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement V</div>
+
+        <h2>Return</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>During the music, quietly give everyone their reflection card.</p>
+
+        <div class="instruction">
+
+            <strong>Observe Water</strong>
+
+            Watch how Water moves through this final movement.
+
+        </div>
+
+        <p>Notice what thought or idea arises from watching.</p>
+
+        <p>Choose one and breathe air into it. Follow it toward whatever it might become, carry, nourish, remember, or return to.</p>
+
+        <p>Let the thought find its way home.</p>
+
+        <p>Then return to the experience and be a guest.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+</div>
+
+</div>
+
 
 <script>
 
@@ -647,28 +511,25 @@ function showSection(sectionId) {
     document.getElementById("menu").style.display = "none";
 
     document.querySelectorAll(".section").forEach(function(section) {
-
         section.classList.remove("active");
-
     });
 
     document.getElementById(sectionId).classList.add("active");
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 
 }
+
 
 function showMenu() {
 
     document.querySelectorAll(".section").forEach(function(section) {
-
         section.classList.remove("active");
-
     });
 
     document.getElementById("menu").style.display = "block";
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 
 }
 
