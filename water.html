@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -12,331 +11,209 @@
 
 <style>
 
-    * {
-
-        box-sizing: border-box;
-
-    }
-
-    body {
-
-        margin: 0;
-
-        min-height: 100vh;
-
-        background: #edf4f2;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-    }
-
-    .page {
-
-        min-height: 100vh;
-
-        display: flex;
-
-        justify-content: center;
-
-        padding: 32px 20px;
-
-    }
-
-    .container {
-
-        width: 100%;
-
-        max-width: 520px;
-
-    }
-
-    .header {
-
-        text-align: center;
-
-        padding: 28px 10px 30px;
-
-    }
-
-    .element {
-
-        font-size: 13px;
-
-        letter-spacing: 4px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 12px;
-
-        opacity: 0.65;
-
-    }
-
-    h1 {
-
-        font-size: 34px;
-
-        font-weight: normal;
-
-        margin: 0 0 10px;
-
-    }
-
-    .subtitle {
-
-        font-size: 17px;
-
-        font-style: italic;
-
-        opacity: 0.75;
-
-    }
-
-    .menu {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 12px;
-
-    }
-
-    .menu-button {
-
-        width: 100%;
-
-        padding: 18px 20px;
-
-        background: rgba(255,255,255,0.55);
-
-        border: 1px solid rgba(41,37,31,0.18);
-
-        border-radius: 8px;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 16px;
-
-        text-align: left;
-
-        cursor: pointer;
-
-        transition: background 0.2s;
-
-    }
-
-    .menu-button:active {
-
-        background: rgba(255,255,255,0.9);
-
-    }
-
-    .menu-button span {
-
-        display: block;
-
-        font-size: 12px;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 5px;
-
-        opacity: 0.6;
-
-    }
-
-    .section {
-
-        display: none;
-
-    }
-
-    .section.active {
-
-        display: block;
-
-    }
-
-    .section-header {
-
-        text-align: center;
-
-        padding: 24px 10px 30px;
-
-    }
-
-    .section-label {
-
-        font-size: 12px;
-
-        letter-spacing: 3px;
-
-        text-transform: uppercase;
-
-        opacity: 0.6;
-
-        margin-bottom: 12px;
-
-    }
-
-    h2 {
-
-        font-size: 29px;
-
-        font-weight: normal;
-
-        margin: 0;
-
-    }
-
-    .content {
-
-        background: rgba(255,255,255,0.45);
-
-        border-radius: 10px;
-
-        padding: 24px 22px;
-
-        line-height: 1.65;
-
-        font-size: 17px;
-
-    }
-
-    .content p {
-
-        margin: 0 0 18px;
-
-    }
-
-    .content p:last-child {
-
-        margin-bottom: 0;
-
-    }
-
-    .instruction {
-
-        padding: 18px;
-
-        margin: 20px 0;
-
-        border-left: 3px solid rgba(41,37,31,0.45);
-
-        background: rgba(255,255,255,0.35);
-
-    }
-
-    .instruction strong {
-
-        display: block;
-
-        font-size: 13px;
-
-        letter-spacing: 1.5px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 8px;
-
-    }
-
-    .rule {
-
-        font-style: italic;
-
-        text-align: center;
-
-        padding: 22px 8px;
-
-        margin-top: 24px;
-
-        border-top: 1px solid rgba(41,37,31,0.15);
-
-    }
-
-    .buttons {
-
-        display: flex;
-
-        gap: 10px;
-
-        margin-top: 22px;
-
-    }
-
-    .back-button,
-
-    .question-button {
-
-        flex: 1;
-
-        padding: 15px;
-
-        background: transparent;
-
-        border: 1px solid rgba(41,37,31,0.3);
-
-        border-radius: 8px;
-
-        color: #29251f;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 15px;
-
-        cursor: pointer;
-
-    }
-
-    .back-button:active,
-
-    .question-button:active {
-
-        background: rgba(255,255,255,0.5);
-
-    }
-
-    .question {
-
-        display: none;
-
-        margin-top: 18px;
-
-        padding: 18px;
-
-        background: rgba(255,255,255,0.5);
-
-        border-radius: 8px;
-
-        line-height: 1.6;
-
-    }
-
-    .question.active {
-
-        display: block;
-
-    }
-
-    .question strong {
-
-        display: block;
-
-        font-size: 13px;
-
-        letter-spacing: 1.5px;
-
-        text-transform: uppercase;
-
-        margin-bottom: 8px;
-
-    }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f4f0e8;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+.header {
+    text-align: center;
+    padding: 28px 10px 30px;
+}
+
+.element {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: .65;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+.subtitle {
+    font-size: 17px;
+    font-style: italic;
+    opacity: .75;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-button {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(41,37,31,.18);
+    border-radius: 8px;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.menu-button:active {
+    background: rgba(255,255,255,.9);
+}
+
+.menu-button span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    opacity: .6;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section-header {
+    text-align: center;
+    padding: 24px 10px 30px;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-size: 29px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.content {
+    background: rgba(255,255,255,.45);
+    border-radius: 10px;
+    padding: 24px 22px;
+    line-height: 1.65;
+    font-size: 17px;
+}
+
+.content p {
+    margin: 0 0 18px;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.instruction {
+    padding: 18px;
+    margin: 20px 0;
+    border-left: 3px solid rgba(41,37,31,.45);
+    background: rgba(255,255,255,.35);
+}
+
+.instruction strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.rule {
+    font-style: italic;
+    text-align: center;
+    padding: 22px 8px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(41,37,31,.15);
+}
+
+.question {
+    display: none;
+    margin-top: 20px;
+    padding: 18px;
+    background: rgba(255,255,255,.35);
+    border-left: 3px solid rgba(41,37,31,.45);
+}
+
+.question strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.action-button {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgba(41,37,31,.3);
+    border-radius: 8px;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.action-button:active {
+    background: rgba(255,255,255,.5);
+}
+
+.back-button {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgba(41,37,31,.3);
+    border-radius: 8px;
+    color: #29251f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.back-button:active {
+    background: rgba(255,255,255,.5);
+}
 
 </style>
 
@@ -348,186 +225,153 @@
 
 <div class="container">
 
-    <!-- MAIN MENU -->
 
-    <div id="menu">
+<!-- MENU -->
 
-        <div class="header">
+<div id="menu">
 
-            <div class="element">Your Element</div>
+    <div class="header">
 
-            <h1>Water</h1>
+        <div class="element">Your Element</div>
 
-            <div class="subtitle">the Receiver</div>
+        <h1>Water</h1>
 
-        </div>
-
-        <div class="menu">
-
-            <button class="menu-button" onclick="showSection('intro')">
-
-                <span>Begin here</span>
-
-                Introduction
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m1')">
-
-                <span>Movement I</span>
-
-                Abundance
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m2')">
-
-                <span>Movement II</span>
-
-                Imagination
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m3')">
-
-                <span>Movement III</span>
-
-                Connection
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m4')">
-
-                <span>Movement IV</span>
-
-                Fracture
-
-            </button>
-
-            <button class="menu-button" onclick="showSection('m5')">
-
-                <span>Movement V</span>
-
-                Return
-
-            </button>
-
-        </div>
+        <div class="subtitle">the Receiver</div>
 
     </div>
 
-    <!-- INTRODUCTION -->
+    <div class="menu">
 
-    <div id="intro" class="section">
+        <button class="menu-button" onclick="showSection('intro')">
+            <span>Begin here</span>
+        </button>
 
-        <div class="section-header">
+        <button class="menu-button" onclick="showSection('m1')">
+            <span>Movement I</span>
+        </button>
 
-            <div class="section-label">Your Element</div>
+        <button class="menu-button" onclick="showSection('m2')">
+            <span>Movement II</span>
+        </button>
 
-            <h2>Water</h2>
+        <button class="menu-button" onclick="showSection('m3')">
+            <span>Movement III</span>
+        </button>
 
-        </div>
+        <button class="menu-button" onclick="showSection('m4')">
+            <span>Movement IV</span>
+        </button>
 
-        <div class="content">
-
-            <p>You are Water, the one that receives.</p>
-
-            <p>You move through everything. You gather, carry, nourish, reflect, and return.</p>
-
-            <div class="instruction">
-
-                <strong>Your role</strong>
-
-                Listen. Notice what is offered. When the moment comes, let something go a little deeper.
-
-            </div>
-
-            <p>You will be entrusted with a rainstick for the evening. Turn it slowly when your time arrives.</p>
-
-            <p>At certain moments, you will also be asked to listen closely to someone else's experience.</p>
-
-            <div class="instruction">
-
-                <strong>A small rule</strong>
-
-                You are given a question to ask in each movement, you can do so when a few bites have been taken. Turn your rainstick as slow as you can, you may reveal your question in the appropriate movement at that time only, and then ask it to the group.
-
-            </div>
-
-            <p>You will also be entrusted in each movement to listen to a different element. When the moment feels right, ask that person one genuine follow-up question.</p>
-
-            <p>Let the conversation continue naturally. You do not need to manage it, explain it, or keep it going.</p>
-
-            <div class="instruction">
-
-                <strong>Trust the sequence</strong>
-
-                You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
-
-            </div>
-
-            <div class="rule">
-
-                Receive first. Respond second. Then return to being a guest.
-
-            </div>
-
-            <p style="text-align:center; font-style:italic;">Don’t peek.</p>
-
-        </div>
-
-        <button class="back-button" onclick="showMenu()">Return to Menu</button>
+        <button class="menu-button" onclick="showSection('m5')">
+            <span>Movement V</span>
+        </button>
 
     </div>
 
-    <!-- MOVEMENT I -->
+</div>
 
-    <div id="m1" class="section">
 
-        <div class="section-header">
+<!-- INTRODUCTION -->
 
-            <div class="section-label">Movement I</div>
+<div id="intro" class="section">
 
-            <h2>Abundance</h2>
+    <div class="section-header">
+
+        <div class="section-label">Your Element</div>
+
+        <h2>Water</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>You are Water, the one that receives.</p>
+
+        <p>You move through everything. You gather, carry, nourish, reflect, and return.</p>
+
+        <p>Your role <strong>Listen. Notice what is offered. When the moment comes, let something go a little deeper.</strong></p>
+
+        <p>You will be entrusted with a rainstick for the evening. Turn it slowly when it is time. You will then ask everyone a discussion question.</p>
+
+        <p>Additionally, at certain moments, you will be asked to listen closely to someone else's experience. When the moment feels right, ask that person one genuine follow-up question. You will know who.</p>
+
+        <div class="instruction">
+
+            <strong>Your task </strong>
+
+            You are given a question to reveal for each movement. Do so only once the meal is served. Wait for everyone to take a few bites, and then ask the question.
 
         </div>
 
-        <div class="content">
+        <p>Let the conversation continue naturally. You do not need to manage it, explain it, or keep it going.</p>
 
-            <p>Listen closely to <strong>Earth</strong> during this movement.</p>
+        <p>Before we begin, spend five minutes in the kitchen to clarify your role and responsibilities for the evening. Once we begin, trust the sequence. Your instructions will be waiting when you need them.</p>
 
-            <div class="instruction">
+        <div class="instruction">
 
-                <strong>Your invitation</strong>
+            <strong>Trust the sequence</strong>
 
-                Notice something Earth says or does that reveals how they are experiencing their role tonight.
+            You will have access to five movements in this menu. Only open the movement you are currently in. Part of the experience is not knowing what comes next.
 
-            </div>
+            <br><br>
 
-            <p>When the moment feels natural, ask Earth one genuine follow-up question about what you noticed.</p>
-
-            <p>Then let the conversation continue without directing it.</p>
-
-            <div class="rule">
-
-                Receive what is offered. Then return to the table.
-
-            </div>
+            Before each movement begins, open the respective instructions. Read them before the movement starts so you know what to notice, what to do, and when to act. Reveal the question only when the time arrives.
 
         </div>
 
-        <div class="buttons">
+        <div class="rule">
 
-            <button class="question-button" onclick="revealQuestion('q1')">
+            Receive first. Respond second. Then return to being a guest.
 
+        </div>
+
+        <p style="text-align:center;font-style:italic;">Don’t peek.</p>
+
+    </div>
+
+    <button class="back-button" onclick="showMenu()">Return to Menu</button>
+
+</div>
+
+
+<!-- MOVEMENT I -->
+
+<div id="m1" class="section">
+
+    <div class="section-header">
+
+        <div class="section-label">Movement I</div>
+
+        <h2>Abundance</h2>
+
+    </div>
+
+    <div class="content">
+
+        <p>Listen closely to Earth during this movement.</p>
+
+        <div class="instruction">
+
+            <strong>Your invitation</strong>
+
+            Notice something Earth says or does that reveals how they are experiencing their role tonight.
+
+        </div>
+
+        <p>When the moment feels natural, ask Earth one genuine follow-up question about what you noticed.</p>
+
+        <p>Then let the conversation continue without directing it.</p>
+
+        <p>Receive what is offered. Then return to the table.</p>
+
+        <div class="action-buttons">
+
+            <button class="action-button" onclick="revealQuestion('q1')">
                 Reveal Question
-
             </button>
 
-            <button class="back-button" onclick="showMenu()">
-
+            <button class="action-button" onclick="showMenu()">
                 Return to Menu
-
             </button>
 
         </div>
@@ -536,60 +380,53 @@
 
             <strong>Your question</strong>
 
-            When something sustains you, what do you feel called to sustain in return?
+            What is in danger of disappearing from your own life that you've been taking for granted?
 
         </div>
 
     </div>
 
-    <!-- MOVEMENT II -->
+</div>
 
-    <div id="m2" class="section">
 
-        <div class="section-header">
+<!-- MOVEMENT II -->
 
-            <div class="section-label">Movement II</div>
+<div id="m2" class="section">
 
-            <h2>Imagination</h2>
+    <div class="section-header">
 
-        </div>
+        <div class="section-label">Movement II</div>
 
-        <div class="content">
+        <h2>Imagination</h2>
 
-            <p>Listen closely to <strong>Air</strong> during this movement.</p>
+    </div>
 
-            <div class="instruction">
+    <div class="content">
 
-                <strong>Your invitation</strong>
+        <p>Listen closely to Air during this movement.</p>
 
-                Notice something Air says or does that reveals how they are experiencing their role tonight.
+        <div class="instruction">
 
-            </div>
+            <strong>Your invitation</strong>
 
-            <p>When the moment feels natural, ask Air one genuine follow-up question about what you noticed.</p>
-
-            <p>Then let the conversation continue without directing it.</p>
-
-            <div class="rule">
-
-                Receive what is offered. Then return to the table.
-
-            </div>
+            Notice something Air says or does that reveals how they are experiencing their role tonight.
 
         </div>
 
-        <div class="buttons">
+        <p>When the moment feels natural, ask Air one genuine follow-up question about what you noticed.</p>
 
-            <button class="question-button" onclick="revealQuestion('q2')">
+        <p>Then let the conversation continue without directing it.</p>
 
+        <p>Receive what is offered. Then return to the table.</p>
+
+        <div class="action-buttons">
+
+            <button class="action-button" onclick="revealQuestion('q2')">
                 Reveal Question
-
             </button>
 
-            <button class="back-button" onclick="showMenu()">
-
+            <button class="action-button" onclick="showMenu()">
                 Return to Menu
-
             </button>
 
         </div>
@@ -598,60 +435,53 @@
 
             <strong>Your question</strong>
 
-            How might your imagination change when you know others are imagining alongside you?
+            Which of the three capacities do you most often forget when you interact with the living world?
 
         </div>
 
     </div>
 
-    <!-- MOVEMENT III -->
+</div>
 
-    <div id="m3" class="section">
 
-        <div class="section-header">
+<!-- MOVEMENT III -->
 
-            <div class="section-label">Movement III</div>
+<div id="m3" class="section">
 
-            <h2>Connection</h2>
+    <div class="section-header">
 
-        </div>
+        <div class="section-label">Movement III</div>
 
-        <div class="content">
+        <h2>Connection</h2>
 
-            <p>Listen closely to <strong>Fire</strong> during this movement.</p>
+    </div>
 
-            <div class="instruction">
+    <div class="content">
 
-                <strong>Your invitation</strong>
+        <p>Listen closely to Fire during this movement.</p>
 
-                Notice something Fire says or does that reveals how they are experiencing their role tonight.
+        <div class="instruction">
 
-            </div>
+            <strong>Your invitation</strong>
 
-            <p>When the moment feels natural, ask Fire one genuine follow-up question about what you noticed.</p>
-
-            <p>Then let the conversation continue without directing it.</p>
-
-            <div class="rule">
-
-                Receive what is offered. Then return to the table.
-
-            </div>
+            Notice something Fire says or does that reveals how they are experiencing their role tonight.
 
         </div>
 
-        <div class="buttons">
+        <p>When the moment feels natural, ask Fire one genuine follow-up question about what you noticed.</p>
 
-            <button class="question-button" onclick="revealQuestion('q3')">
+        <p>Then let the conversation continue without directing it.</p>
 
+        <p>Receive what is offered. Then return to the table.</p>
+
+        <div class="action-buttons">
+
+            <button class="action-button" onclick="revealQuestion('q3')">
                 Reveal Question
-
             </button>
 
-            <button class="back-button" onclick="showMenu()">
-
+            <button class="action-button" onclick="showMenu()">
                 Return to Menu
-
             </button>
 
         </div>
@@ -660,60 +490,53 @@
 
             <strong>Your question</strong>
 
-            What does belonging ask of us?
+            What does belonging to the living world ask you to do differently?
 
         </div>
 
     </div>
 
-    <!-- MOVEMENT IV -->
+</div>
 
-    <div id="m4" class="section">
 
-        <div class="section-header">
+<!-- MOVEMENT IV -->
 
-            <div class="section-label">Movement IV</div>
+<div id="m4" class="section">
 
-            <h2>Fracture</h2>
+    <div class="section-header">
 
-        </div>
+        <div class="section-label">Movement IV</div>
 
-        <div class="content">
+        <h2>Fracture</h2>
 
-            <p>Listen closely to <strong>Space</strong> during this movement.</p>
+    </div>
 
-            <div class="instruction">
+    <div class="content">
 
-                <strong>Your invitation</strong>
+        <p>Listen closely to Space during this movement.</p>
 
-                Notice something Space says or does that reveals how they are experiencing their role tonight.
+        <div class="instruction">
 
-            </div>
+            <strong>Your invitation</strong>
 
-            <p>When the moment feels natural, ask Space one genuine follow-up question about what you noticed.</p>
-
-            <p>Then let the conversation continue without directing it.</p>
-
-            <div class="rule">
-
-                Receive what is offered. Then return to the table.
-
-            </div>
+            Notice something Space says or does that reveals how they are experiencing their role tonight.
 
         </div>
 
-        <div class="buttons">
+        <p>When the moment feels natural, ask Space one genuine follow-up question about what you noticed.</p>
 
-            <button class="question-button" onclick="revealQuestion('q4')">
+        <p>Then let the conversation continue without directing it.</p>
 
+        <p>Receive what is offered. Then return to the table.</p>
+
+        <div class="action-buttons">
+
+            <button class="action-button" onclick="revealQuestion('q4')">
                 Reveal Question
-
             </button>
 
-            <button class="back-button" onclick="showMenu()">
-
+            <button class="action-button" onclick="showMenu()">
                 Return to Menu
-
             </button>
 
         </div>
@@ -722,60 +545,53 @@
 
             <strong>Your question</strong>
 
-            What happens when everything is abundant, but nothing is connected?
+            Where have you placed yourself above the living world, and what consequences does that create?
 
         </div>
 
     </div>
 
-    <!-- MOVEMENT V -->
+</div>
 
-    <div id="m5" class="section">
 
-        <div class="section-header">
+<!-- MOVEMENT V -->
 
-            <div class="section-label">Movement V</div>
+<div id="m5" class="section">
 
-            <h2>Return</h2>
+    <div class="section-header">
 
-        </div>
+        <div class="section-label">Movement V</div>
 
-        <div class="content">
+        <h2>Return</h2>
 
-            <p>Listen closely to <strong>Spirit</strong> during this movement.</p>
+    </div>
 
-            <div class="instruction">
+    <div class="content">
 
-                <strong>Your invitation</strong>
+        <p>Listen closely to Spirit during this movement.</p>
 
-                Notice something Spirit says or does that reveals how they are experiencing their role tonight.
+        <div class="instruction">
 
-            </div>
+            <strong>Your invitation</strong>
 
-            <p>When the moment feels natural, ask Spirit one genuine follow-up question about what you noticed.</p>
-
-            <p>Then let the conversation continue without directing it.</p>
-
-            <div class="rule">
-
-                Receive what is offered. Then return to the table.
-
-            </div>
+            Notice something Spirit says or does that reveals how they are experiencing their role tonight.
 
         </div>
 
-        <div class="buttons">
+        <p>When the moment feels natural, ask Spirit one genuine follow-up question about what you noticed.</p>
 
-            <button class="question-button" onclick="revealQuestion('q5')">
+        <p>Then let the conversation continue without directing it.</p>
 
+        <p>Receive what is offered. Then return to the table.</p>
+
+        <div class="action-buttons">
+
+            <button class="action-button" onclick="revealQuestion('q5')">
                 Reveal Question
-
             </button>
 
-            <button class="back-button" onclick="showMenu()">
-
+            <button class="action-button" onclick="showMenu()">
                 Return to Menu
-
             </button>
 
         </div>
@@ -784,7 +600,7 @@
 
             <strong>Your question</strong>
 
-            What might remembering mean for you in your life?
+            What might return mean for you in life?
 
         </div>
 
@@ -792,7 +608,11 @@
 
 </div>
 
+
 </div>
+
+</div>
+
 
 <script>
 
@@ -801,34 +621,32 @@ function showSection(sectionId) {
     document.getElementById("menu").style.display = "none";
 
     document.querySelectorAll(".section").forEach(function(section) {
-
         section.classList.remove("active");
-
     });
 
     document.getElementById(sectionId).classList.add("active");
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 
 }
+
 
 function showMenu() {
 
     document.querySelectorAll(".section").forEach(function(section) {
-
         section.classList.remove("active");
-
     });
 
     document.getElementById("menu").style.display = "block";
 
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
 
 }
 
+
 function revealQuestion(questionId) {
 
-    document.getElementById(questionId).classList.toggle("active");
+    document.getElementById(questionId).style.display = "block";
 
 }
 
